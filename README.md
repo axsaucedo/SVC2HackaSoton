@@ -10,7 +10,7 @@ To *install* `SASS` you need `rubygems` and then, you simply do:
 Using SASS
 ----------
 
-I'd recomment to keep a lot of `sass` and `scss` files in the `css/` folder and include all of them using `main.sass` and the `@import` syntax. Example:
+I'd recommend to keep a lot of `sass` and `scss` files in the `css/` folder and include all of them using `main.sass` and the `@import` syntax. Example:
 
     // to import the file "article.sass" or "article.sass" we use
     @import "article"

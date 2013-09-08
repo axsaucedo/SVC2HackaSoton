@@ -1,1 +1,16 @@
+@import "colours"
 
+@import "nav"
+@import "home"
+
+body
+	margin: 0px
+
+
+a
+	:color $link
+	:text-decoration none
+	&:hover
+		:color $link-hover
+	&:focus
+		:color $link-focus
