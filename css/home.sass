@@ -1,5 +1,6 @@
 $home-height: 700px
 $logo-height: 117px
+$logo-width: 500px
 
 #hackasoton
 	:height $home-height
@@ -10,7 +11,7 @@ $logo-height: 117px
 	:top 0px
 	:left 0px
 	:overflow hidden
-	:z-index 10
+	:z-index 5
 
 #hackasoton-wrapper
 	:margin 0px auto
@@ -22,12 +23,16 @@ $logo-height: 117px
 	:background-image url(../images/hackasoton-white.png)
 	:background-repeat no-repeat
 	:position absolute
-	:width 70%
+	:width 80%
+	:height 50%
+	:min-width $logo-width
+	:min-height $logo-height
 	:top 10%
 	:height $logo-height
 	:display block
 	:padding 0px
 	:background-size contain
+	:z-index 10
 
 @-webkit-keyframes move-year
 	0%
@@ -41,8 +46,8 @@ $logo-height: 117px
 	position: absolute
 	font-family: $second-font
 	font-size: 3.5em
-	top: 35%
-	right: 35%
+	top: 5%
+	right: 5%
 	color: rgba($big-subtitle-colour, 0.8)
 
 #hackasoton-year

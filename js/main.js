@@ -30,5 +30,6 @@ function resizeDiv() {
 	var height = window.innerHeight;
 	console.log(height);
 	$('#global-spacer').css('height', height*8 + 'px');
-	$('#hackasoton-wrapper').css('height', height +'px');
+	$('#hackasoton-wrapper').css('height', height +'px')
+	$('article').css('height', height +'px');
 }
