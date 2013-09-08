@@ -35,10 +35,13 @@ a
 		:color $link-focus
 
 
+.wrapper
+	:margin 0px auto
+	:width 100% - (2*$article-side-padding)
+
 article
 	:position relative
 	:z-index 1
 	:background-color $article-bgcolor
-	:padding 0px $article-side-padding
 	:min-height 300px
 	+clearfix()

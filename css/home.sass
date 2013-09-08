@@ -1,4 +1,7 @@
 $home-height: 700px
+$logo-width: 762px
+$logo-height: 117px
+
 
 body
 	:padding-top $home-height
@@ -12,3 +15,64 @@ body
 	:padding-top 37px // hardcoded navbar height
 	:top 0px
 	:left 0px
+
+.hackasoton-logo
+	:background-image url(../images/hackasoton-white.png)
+	:text-indent -10000px
+	:width $logo-width
+	:height $logo-height
+	:display block
+	:margin $logo-height/2 auto 0px auto
+	:padding 0px
+	:background-size contain
+
+@-webkit-keyframes move-year
+	0%
+		right: 0%
+	50%
+		right: 50%
+	100%
+		right: 0%
+
+#hackasoton-year
+	font-size: 13em
+	font-family: $second-font
+	color: rgba($big-subtitle-colour, 0.5)
+	position: absolute
+	bottom: 0%
+	height: 360px
+
+	-webkit-animation: move-year 150s linear infinite
+	-moz-animation:    move-year 150s linear infinite
+	-o-animation:      move-year 150s linear infinite
+	animation:         move-year 150s linear infinite
+
+@-webkit-keyframes move-month
+	0%
+		left: 0%
+	50%
+		left: 70%
+	100%
+		left: 0%
+
+
+#hackasoton-month
+	position: absolute
+	font-family: $second-font
+	color: rgba($big-subtitle-colour, 0.6)
+	font-size: 3em
+	bottom: 31%
+	left: 0px
+	
+	-webkit-animation: move-month 100s linear infinite
+	-moz-animation:    move-month 100s linear infinite
+	-o-animation:      move-month 100s linear infinite
+	animation:         move-month 100s linear infinite
+
+#hackasoton-day
+	position: absolute
+	font-family: $second-font
+	font-size: 3.5em
+	top: 35%
+	right: 35%
+	color: rgba($big-subtitle-colour, 0.8)
