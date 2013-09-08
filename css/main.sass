@@ -1,11 +1,30 @@
+=clearfix
+	zoom: 1
+	&:before, &:after
+		content: ""
+		display: table
+	&:after
+		clear: both
+
 @import "colours"
 
 @import "nav"
 @import "home"
 
-body
-	margin: 0px
+@font-face
+	font-family: Akashi
+	src: url(fonts/akashi.ttf)
 
+@font-face
+	font-family: NexaBold
+	src: url(fonts/NexaBold.otf)
+
+body
+	:margin 0px
+	:font-family $main-font
+ 
+h1, h2, h3, h4, h5, h6
+	:margin-top 0px
 
 a
 	:color $link
@@ -14,3 +33,12 @@ a
 		:color $link-hover
 	&:focus
 		:color $link-focus
+
+
+article
+	:position relative
+	:z-index 1
+	:background-color $article-bgcolor
+	:padding 0px $article-side-padding
+	:min-height 300px
+	+clearfix()
