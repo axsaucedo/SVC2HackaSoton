@@ -16,10 +16,12 @@ window.onresize = function(event) {
 function parallaxScroll() {
 	var scrolled = $(window).scrollTop();
 	var height = window.innerHeight;
+
 	if(scrolled <= height) {
-		$('#hackasoton-wrapper').css('height', (height - scrolled)+'px');
+		console.log(height - scrolled);
+		$('#hackasoton').css('height', (height - scrolled)+'px');
 	} else {
-		$('#hackasoton-wrapper').css('height', 0+'px');
+		$('#hackasoton').css('height', 0+'px');
 		$('#content').css('top', (height-scrolled));
 	}
 }
@@ -27,8 +29,6 @@ function parallaxScroll() {
 function resizeDiv() {
 	var height = window.innerHeight;
 	console.log(height);
-	$('#all').css('height', height*8 + 'px');
-	$('.section').css('height', height +'px');
+	$('#global-spacer').css('height', height*8 + 'px');
 	$('#hackasoton-wrapper').css('height', height +'px');
-	$('#hackasoton').css('height', height +'px');
 }
