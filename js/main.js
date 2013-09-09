@@ -1,35 +1,20 @@
-window.onload = function() {    
-	
-	resizeDiv();
-	parallaxScroll();
-	
-	$(window).bind('scroll',function(e){
-		parallaxScroll();
-	});
-}
+(function() {
+	var height;
 
-window.onresize = function(event) {
-	resizeDiv();
-	parallaxScroll();
-}
-
-function parallaxScroll() {
-	var scrolled = $(window).scrollTop();
-	var height = window.innerHeight;
-
-	if(scrolled <= height) {
-		console.log(height - scrolled);
-		$('#hackasoton').css('height', (height - scrolled)+'px');
-	} else {
-		$('#hackasoton').css('height', 0+'px');
-		$('#content').css('top', (height-scrolled));
+	var resizeDiv = function() {
+		var nh = window.innerHeight;
+		if (height === nh) return;
+		height = nh;
+		document.getElementById('hackasoton').style.height = height + 'px';
+		document.body.style.paddingTop = height + 'px';
 	}
-}
 
-function resizeDiv() {
-	var height = window.innerHeight;
-	console.log(height);
-	$('#global-spacer').css('height', height*8 + 'px');
-	$('#hackasoton-wrapper').css('height', height +'px')
-	$('article').css('height', height +'px');
-}
+	window.addEventListener("load", function() {
+		resizeDiv();
+	});
+
+	window.addEventListener("resize", function() {
+		resizeDiv();
+	})
+
+})();
