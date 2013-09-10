@@ -1,6 +1,6 @@
 $home-height: 700px
-$logo-height: 117px
-$logo-width: 500px
+$logo-width: 821px
+$logo-height: 126px
 
 body
 	:padding-top $home-height + 37px
@@ -15,43 +15,27 @@ body
 	:left 0px
 	:overflow hidden
 	:z-index 0
-	:background url(http://images.twitrounds.com/artistic-backgrounds/blue-grunge.jpg) no-repeat 
-
-#svc2uk-logo
-	:background-image url(../images/svc2uk-all-white.png)
-	:background-repeat no-repeat
-	:background-size contain
-	:position absolute
-	:top 10%
-	:left -5px
-	:width 50%
-	:height 30%
+	:background url(../images/blue-grunge.jpg) no-repeat 
 
 #hackasoton-logo
 	:text-indent -10000px
-	:background-image url(../images/hackasoton-white.png)
+	:background-image url(../images/logolb.png)
 	:background-repeat no-repeat
-	:background-size contain
-	:position absolute
-	:top 15%
-	:left 24%
-	:min-height $logo-height
-	:min-width $logo-width
-	:width 70%
-	:height 40%
+	:margin 10% auto
+	:height $logo-height
+	:width $logo-width
 	:display block
 	:padding 0px
 
 #hackasoton-slogan
-	:position absolute
+	:position relative
 	:font-family $second-font
 	:text-align center
-	:padding 0px 100px 0 100px
-	:font-size 2em
+	:margin 0px auto
+	:font-size 1.2em
 	:color white
-	:top 50%
+	:top -10%
 	
-
 @-webkit-keyframes move-year
 	0%
 		right: 0%
@@ -59,14 +43,6 @@ body
 		right: 50%
 	100%
 		right: 0%
-
-#hackasoton-day
-	position: absolute
-	font-family: $second-font
-	font-size: 3.5em
-	top: 10%
-	right: 5%
-	color: rgba($big-subtitle-colour, 0.8)
 
 #hackasoton-year
 	font-size: 13em
@@ -83,11 +59,11 @@ body
 
 @-webkit-keyframes move-month
 	0%
-		left: 0%
+		left: 10%
 	50%
-		left: 70%
+		left: 60%
 	100%
-		left: 0%
+		left: 10%
 
 
 #hackasoton-month
@@ -98,7 +74,7 @@ body
 	font-size: 3em
 	bottom: 31%
 	left: 0px
-	
+	white-space: nowrap
 	-webkit-animation: move-month 100s linear infinite
 	-moz-animation:    move-month 100s linear infinite
 	-o-animation:      move-month 100s linear infinite
