@@ -15,7 +15,7 @@ body
 	:left 0px
 	:overflow hidden
 	:z-index 0
-	:background url(../wallpapers/hackasoton-top-wallpaper.jpg) no-repeat 
+	:background url(http://images.twitrounds.com/artistic-backgrounds/blue-grunge.jpg) no-repeat 
 
 .hackasoton-logo
 	:text-indent -10000px
@@ -35,14 +35,6 @@ body
 	100%
 		right: 0%
 
-#hackasoton-day
-	position: absolute
-	font-family: $second-font
-	font-size: 3.5em
-	top: 5%
-	right: 5%
-	color: rgba($big-subtitle-colour, 0.8)
-
 #hackasoton-year
 	font-size: 13em
 	font-family: $second-font
@@ -58,21 +50,22 @@ body
 
 @-webkit-keyframes move-month
 	0%
-		left: 0%
+		left: 10%
 	50%
-		left: 70%
+		left: 60%
 	100%
-		left: 0%
+		left: 10%
 
 
 #hackasoton-month
 	position: absolute
 	font-family: $second-font
-	color: rgba($big-subtitle-colour, 0.6)
+	color: lighten($big-subtitle-colour, 25%)
+	opacity: 0.9
 	font-size: 3em
 	bottom: 31%
 	left: 0px
-	
+	white-space: nowrap
 	-webkit-animation: move-month 100s linear infinite
 	-moz-animation:    move-month 100s linear infinite
 	-o-animation:      move-month 100s linear infinite
