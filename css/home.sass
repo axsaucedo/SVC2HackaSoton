@@ -15,21 +15,42 @@ body
 	:left 0px
 	:overflow hidden
 	:z-index 0
-	:background url(../wallpapers/hackasoton-top-wallpaper.jpg) no-repeat 
+	:background url(../wallpapers/wallpaper-2373631.jpg) no-repeat 
 
-.hackasoton-logo
+#svc2uk-logo
+	:background-image url(../images/svc2uk-blue.png)
+	:background-repeat no-repeat
+	:background-size contain
+	:position absolute
+	:top 10%
+	:left -5px
+	:width 50%
+	:height 30%
+
+#hackasoton-logo
 	:text-indent -10000px
 	:background-image url(../images/hackasoton-white.png)
 	:background-repeat no-repeat
+	:background-size contain
 	:position absolute
-	:top 10%
+	:top 19%
+	:left 22%
 	:min-height $logo-height
 	:min-width $logo-width
-	:width 80%
-	:height 50%
+	:width 70%
+	:height 40%
 	:display block
 	:padding 0px
-	:background-size contain
+
+#hackasoton-slogan
+	:position absolute
+	:font-family $second-font
+	:text-align center
+	:padding 0px 100px 0 100px
+	:font-size 2em
+	:color white
+	:top 40%
+	
 
 @-webkit-keyframes move-year
 	0%
@@ -72,7 +93,8 @@ body
 #hackasoton-month
 	position: absolute
 	font-family: $second-font
-	color: rgba($big-subtitle-colour, 0.6)
+	color: $big-subtitle-colour
+	opacity: 0.7
 	font-size: 3em
 	bottom: 31%
 	left: 0px
