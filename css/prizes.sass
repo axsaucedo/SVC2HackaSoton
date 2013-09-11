@@ -1,0 +1,40 @@
+.prize
+	:width (100%/3)
+	:float left
+	h2
+		:font-weight normal
+		:font-size 3em
+		:text-align center
+		:color $big-subtitle-colour
+		span
+			:display block
+			:font-size 0.65em
+			:color lighten(#000,40%)
+
+	ul
+		:display block
+		:margin 20px 0px
+		:padding 0px 5%
+		:list-style none
+
+	li
+		:color lighten(#000, 30%)
+		:padding 10px 0px
+		:text-align justify
+
+.prizetbl
+	:width 100%
+	:font-weight normal
+	:font-size 1.2em
+	tr
+		:border-top 1px solid #eee
+		&:first-child		
+			:border-top none
+		&:hover
+			:background #eee
+	td
+		:width 50%
+		:padding 20px
+		&:first-child
+			:text-align right
+			
