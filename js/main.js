@@ -7,7 +7,8 @@
 		var mapOptions = {
 			zoom: 15,
 			center: mountbatten,
-			mapTypeId: google.maps.MapTypeId.ROADMAP
+			mapTypeId: google.maps.MapTypeId.ROADMAP,
+			scrollwheel: false,
 		};
 
 		map = new google.maps.Map(document.getElementById('location_map'), mapOptions);
