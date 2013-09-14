@@ -58,37 +58,61 @@
 			:font-weight bold
 			:font-size 1.5em
 			
-.left-pic, .right-pic
-	background-size: cover
-	background-repeat: no-repeat
-	width: 500px
-	height: 450px
-	position: absolute
-
-
-#left-main-pic
-	background-image: url(../images/cameron.jpg)
-	top: 0px
-	left: -40px
-	z-index: -1000
-
-#right-main-pic
-	background-image: url(../images/linkedin.jpg)
-	top: 0px
-	right: 0px
-	z-index: -1000
-
-#prizes .images
-	:height 200px
+#individual-title
+	:background transparent
+	:padding 0px 0px 0px 0px
+	:width 100%
+	:position relative
 	:overflow hidden
-	:margin 50px auto
-	+clearfix()
+	div
+		:margin auto auto
+		:width 500px
+		:text-align center
+		:height 150px
+		:background white
+		:font-family  $second-font
+		:font-size 3em
 	img
-		:float left
-		:margin 0
-		:padding 0
-		:width 49%
-	img:first-child
-		:margin-right 0.1%
-	img:last-child
+		:position absolute
+		:top 0
+		:width 400px
+		:z-index -100
+	#left-image
+		:left 0
+	#right-image
+		:right 0
+
+// .left-pic, .right-pic
+// 	background-size: cover
+// 	background-repeat: no-repeat
+// 	width: 500px
+// 	height: 450px
+// 	position: absolute
+
+
+// #left-main-pic
+// 	background-image: url(../images/cameron.jpg)
+// 	top: 0px
+// 	left: -40px
+// 	z-index: -1000
+
+// #right-main-pic
+// 	background-image: url(../images/linkedin.jpg)
+// 	top: 0px
+// 	right: 0px
+// 	z-index: -1000
+
+// #prizes .images
+// 	:height 200px
+// 	:overflow hidden
+// 	:margin 50px auto
+// 	+clearfix()
+// 	img
+// 		:float left
+// 		:margin 0
+// 		:padding 0
+// 		:width 49%
+// 	img:first-child
+// 		:margin-right 0.1%
+// 	img:last-child
 		:margin-left 0.1%
