@@ -24,13 +24,12 @@
 	:margin 5px
 	:cursor pointer
 	:outline 0 none
-	+linear-gradient($top, $bottom)
 	&:hover
-		+linear-gradient(lighten($top,5%), $bottom)
+		:background $top
 		:outline 0 none
 	&:active
 		:outline 0 none !important
-		+linear-gradient($bottom, $top)
+		:background darken($top, 5%)
 	&:focus
 		:outline thin #333333
 	&::-moz-focus-inner
