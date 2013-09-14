@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Simple Events Calendar</title>
+<link href="../css/reset.css" type="text/css" rel="stylesheet" />
+<link href="../css/dp_calendar.css" type="text/css" rel="stylesheet" />
+<link href="../css/demo.css" type="text/css" rel="stylesheet" />
+<link href="../themes/base/jquery.ui.all.css" type="text/css" rel="stylesheet" />
+
+<script type='text/javascript' src='../js/jquery-1.5.2.min.js'></script> 
+<script type="text/javascript" src="../ui/jquery.ui.core.js"></script> 
+<script type="text/javascript" src="../ui/jquery.ui.position.js"></script>
+<script type="text/javascript" src="../ui/jquery.ui.datepicker.js"></script> 
+<script type="text/javascript" src="../js/date.js"></script>
+<script type="text/javascript" src="../js/jquery.dp_calendar.min.js"></script>
+<script type="text/javascript">
+
+	$(document).ready(function(){  
+		var events_array = new Array(
+			{
+				startDate: new Date(2013, 08, 13),
+				title: "Event 1",
+				description: "Description 1",
+				priority: 2, // 1 = Low, 2 = Medium, 3 = Urgent
+				frecuency: 1 // 1 = Daily, 2 = Weekly, 3 = Monthly, 4 = Yearly
+			}
+		);	
+		
+		$("#calendar").dp_calendar({
+			events_array: events_array
+		}); 
+
+		$("#calendar").dp_calendar.setDay(12);
+
+	});  
+</script>
+</head>
+
+<body>
+	<div id="content">
+    	<div class="title_h1">
+        	<h1>Simple Events Calendar</h1>
+        </div>
+		<div id="calendar"></div>
+    </div>
+</body>
+</html>
