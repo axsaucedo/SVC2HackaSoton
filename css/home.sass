@@ -15,7 +15,9 @@ body
 	:left 0px
 	:overflow hidden
 	:z-index 0
-	:background url(../images/blue-grunge.jpg) no-repeat 
+	:background url(../images/blue-grunge.jpg) no-repeat
+
+
 
 #hackasoton-logo
 	:text-indent -10000px
@@ -27,6 +29,47 @@ body
 	:width $logo-width
 	:display block
 	:padding 0px
+
+#hackasoton-buttons
+	:margin-left 38%
+	:width (100%/4)
+
+#hackasoton-applybutton
+	color: #fff
+	text-decoration: none
+	font-weight: bold
+	background: red
+	padding: 12px 12px 12px
+	-moz-border-radius: 5px
+	-webkit-border-radius: 5px
+	-moz-box-shadow: 0 1px 3px #999
+	-webkit-box-shadow: 0 1px 3px #999
+	text-shadow: 0 -1px 1px #222
+	border-bottom: 1px solid #222
+	:text-align center
+	position: relative
+	cursor: pointer
+	&:active
+		background: #444
+
+#hackasoton-infobutton
+	color: #fff
+	text-decoration: none
+	font-weight: bold
+	:margin-left 10px
+	background: red
+	padding: 12px 12px 12px
+	-moz-border-radius: 5px
+	-webkit-border-radius: 5px
+	-moz-box-shadow: 0 1px 3px #999
+	-webkit-box-shadow: 0 1px 3px #999
+	text-shadow: 0 -1px 1px #222
+	border-bottom: 1px solid #222
+	:text-align center
+	position: relative
+	cursor: pointer
+	&:active
+		background: #444
 
 #hackasoton-slogan
 	:position relative
@@ -73,7 +116,7 @@ body
 	color: $big-subtitle-colour
 	opacity: 0.7
 	font-size: 3em
-	bottom: 31%
+	bottom: 30%
 	left: 0px
 	white-space: nowrap
 	-webkit-animation: move-month 100s linear infinite
