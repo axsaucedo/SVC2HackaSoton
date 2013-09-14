@@ -1,12 +1,60 @@
-.day
-	:width (100%/3)
-	:float left
-	// +text-shadow(1px,1px,2px,rgba(255,255,255,0.8))
-	td
-		:padding 5px
-	td:first-child
-		:font-weight bold
+$schedule-header-height: 80px
 
-	h1
-		:text-align left
-		:font-family Arial, "sans-serif"
+.day
+	width: (100%/3)
+	float: left
+	overflow: hidden
+	padding-top: 20px
+
+
+.date 
+	width: 100%
+	height: $schedule-header-height
+	padding-bottom: 30px
+	div
+		float: left
+
+.schedule-dow
+	padding: 5px 5px 5px 5px
+	font-size: 3.5em
+	
+
+.day-month
+	margin-left: 20px
+	width: 60px
+	height: $schedule-header-height
+
+.schedule-month
+	font-size: 1.6em
+
+.schedule-day
+	font-size: 2.3em
+
+.schedule-entry
+	height: 30px
+	padding: 5px 5px 5px 20px
+	&:hover
+		-webkit-transform:  scale(1.4) rotate(2deg)
+		padding-left: 50px
+
+	div
+		float: left
+	div:first-child
+		background: $big-subtitle-colour
+		right: 5px
+		top: 4px
+		width: 40px
+		padding: 5px 10px 6px
+		color: #fff
+		text-decoration: none
+		font-weight: bold
+		line-height: 1
+		-moz-border-radius: 5px
+		-webkit-border-radius: 5px
+		-moz-box-shadow: 0 1px 3px #999
+		-webkit-box-shadow: 0 1px 3px #999
+		text-shadow: 0 -1px 1px #222
+		border-bottom: 1px solid #222
+
+	div:nth-child(2)
+		padding: 5px 5px 5px 20px 
