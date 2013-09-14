@@ -44,7 +44,7 @@
 	var parallax = function() {
 		var scrolled = $(window).scrollTop();
 
-		var parallaxPrizes = (heightPrize - (60+height + offsetPrizes - scrolled))/15;
+		var parallaxPrizes = (heightPrize - (60+height + offsetPrizes - scrolled))/12;
 		if (parallaxPrizes > 0) {
 			console.log("Prizes parallax: " + parallaxPrizes, heightPrize);
 			$('#left-image').css('top', -parallaxPrizes+'px');
