@@ -58,6 +58,12 @@
 	&:after
 		clear: both
 
+=column($no, $min-width: 100px)
+	:width (100%/$no)
+	:min-width $min-width
+	:float left
+	:display block
+
 
 // we should define a color scheme here
 // and never use hard-coded colours anywhere else in the styles
