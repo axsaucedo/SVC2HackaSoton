@@ -44,11 +44,20 @@
 	var parallax = function() {
 		var scrolled = $(window).scrollTop();
 
+		var parallaxAndroid = height - scrolled;
+		if(parallaxAndroid < 200 && parallaxAndroid > -100) {
+			console.log(height, scrolled, parallaxAndroid);
+			$('.android').addClass("android-active");
+		} else {
+			$('.android').removeClass("android-active");
+		}
+
 		var parallaxPrizes = (heightPrize - (60+height + offsetPrizes - scrolled))/12;
 		if (parallaxPrizes > 0) {
 			console.log("Prizes parallax: " + parallaxPrizes, heightPrize);
 			$('#left-image').css('top', -parallaxPrizes+'px');
 			$('#right-image').css('top', -parallaxPrizes+'px');
+			return;
 		}
 	}
 
