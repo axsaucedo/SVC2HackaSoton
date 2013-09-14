@@ -9,6 +9,7 @@
 			center: mountbatten,
 			mapTypeId: google.maps.MapTypeId.ROADMAP
 		};
+
 		map = new google.maps.Map(document.getElementById('location_map'), mapOptions);
 
 		new google.maps.Marker({
