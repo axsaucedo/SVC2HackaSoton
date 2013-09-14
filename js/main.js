@@ -1,4 +1,4 @@
-(function() {
+$(function() {
 	var height;
 
 	var resizeDiv = function() {
@@ -7,6 +7,8 @@
 		height = nh;
 		document.getElementById('hackasoton').style.height = height + 'px';
 		document.body.style.paddingTop = height + 'px';
+
+		// console.log($('event').height() + $('photos').height() + $('schedule').height() + $('prizes-title').height() + )
 	}
 
 	window.addEventListener("load", function() {
@@ -17,4 +19,15 @@
 		resizeDiv();
 	})
 
-})();
+	function parallaxScroll() {
+		var scrolled = $(window).scrollTop();
+
+		console.log($('event').offset());
+
+	}
+
+	$(window).bind('scroll',function(e){
+		parallaxScroll();
+	});
+
+});
