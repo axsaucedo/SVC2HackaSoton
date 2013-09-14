@@ -1,10 +1,30 @@
 
+.prizes-title-section
+	:background transparent
+	:position relative
+	:z-index 1
+	:background-color transparent
+	:height 220px
+	:width 100%
+	+clearfix()
+
+.prizes-title
+	:background white
+	:width 30%
+	:top 0
+	:height 110%
+	:margin auto auto
+	:text-align center
+	:font-family $second-font
+	:font-size 3em
+
+
+
 .prize
 	:width (100%/3)
 	:float left
 	h2
 		:font-weight normal
-		:font-size 3em
 		:text-align center
 		:color $big-subtitle-colour
 		span
@@ -23,6 +43,19 @@
 		:padding 10px 0px
 		:text-align justify
 
+.first-place
+	:margin-top -60px
+	h2
+		:font-size 4.5em
+
+.second-place, .third-place
+	h2
+		:font-size 3em
+	ul
+		li
+			:text-align center
+			:font-weight bold
+
 .prizetbl
 	:width 100%
 	:font-weight normal
@@ -39,3 +72,29 @@
 		&:first-child
 			:text-align right
 			
+.left-pic, .right-pic
+	background-size: cover
+	background-repeat: no-repeat
+	width: 500px
+	height: 450px
+	top: 0px
+	position: absolute
+
+	z-index: -100
+
+#left-main-pic
+	background-image: url(../images/cameron.jpg)
+	left: -40px
+
+#right-main-pic
+	background-image: url(../images/linkedin.jpg)
+	right: -40px
+
+#left-individual-pic
+	background-image: url(../images/prize-like.jpg)
+	left: -40px
+
+#right-individual-pic
+	background-image: url(../images/android-prize.jpg)
+	right: -40px
+
