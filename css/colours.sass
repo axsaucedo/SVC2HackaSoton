@@ -1,4 +1,9 @@
 // some mixins we can use
+=text-shadow($h, $v, $b, $c)
+	-moz-text-shadow: $h $v $b $c
+	-webkit-text-shadow: $h $v $b $c
+	-o-text-shadow: $h $v $b $c
+	text-shadow: $h $v $b $c
 
 =linear-gradient($from, $to, $ie: false)
 	@if $ie != 1
