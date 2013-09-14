@@ -2,6 +2,7 @@ $schedule-header-height: 80px
 
 .day
 	width: (100%/3)
+	:min-width 300px
 	float: left
 	overflow: hidden
 	padding-top: 20px
@@ -10,18 +11,19 @@ $schedule-header-height: 80px
 	width: 100%
 	height: $schedule-header-height
 	padding-bottom: 30px
-	div
+	+clearfix()
+	>div
 		float: left
 
 .schedule-dow
 	padding: 5px 5px 5px 5px
 	font-size: 3.5em
-	
 
 .day-month
 	margin-left: 20px
 	width: 60px
 	height: $schedule-header-height
+	text-align: center
 
 .schedule-month
 	font-size: 1.6em
