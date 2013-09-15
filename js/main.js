@@ -60,9 +60,9 @@
 		var parallaxAndroid = height - scrolled;
 		if(parallaxAndroid < 200 && parallaxAndroid > -100) {
 			console.log(height, scrolled, parallaxAndroid);
-			$('#android-wrapper').addClass("android-active");
+			$('.android').addClass("android-active");
 		} else {
-			$('#android-wrapper').removeClass("android-active");
+			$('.android').removeClass("android-active");
 		}
 
 		if(parallaxAndroid < 0) {
