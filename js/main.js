@@ -54,7 +54,7 @@
 
 		if(parallaxAndroid < 0) {
 			console.log(parallaxAndroid);
-			$('#photos').css('margin-left', parallaxAndroid/2);
+			$('#photos').css('margin-left', parallaxAndroid/4);
 		}
 
 		var parallaxPrizes = (heightPrize - (60+height + offsetPrizes - scrolled))/12;
