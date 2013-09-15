@@ -57,11 +57,25 @@
 	var parallax = function() {
 		var scrolled = $(window).scrollTop();
 
-		var parallaxPrizes = (heightPrize - (100+height + offsetPrizes - scrolled))/10;
+		var parallaxAndroid = height - scrolled;
+		if(parallaxAndroid < 200 && parallaxAndroid > -100) {
+			console.log(height, scrolled, parallaxAndroid);
+			$('#android-wrapper').addClass("android-active");
+		} else {
+			$('#android-wrapper').removeClass("android-active");
+		}
+
+		if(parallaxAndroid < 0) {
+			console.log(parallaxAndroid);
+			$('#photos-wrapper').css('margin-left', parallaxAndroid/4);
+		}
+
+		var parallaxPrizes = (heightPrize - (60+height + offsetPrizes - scrolled))/12;
 		if (parallaxPrizes > 0) {
 			console.log("Prizes parallax: " + parallaxPrizes, heightPrize);
-			$('#left-main-pic').css('top', -parallaxPrizes+'px');
-			$('#right-main-pic').css('top', -parallaxPrizes+'px');
+			$('#left-image').css('top', -parallaxPrizes+'px');
+			$('#right-image').css('top', -parallaxPrizes+'px');
+			return;
 		}
 	}
 
