@@ -35,6 +35,19 @@
 	window.addEventListener("load", function() {
 		resizeDiv();
 		mapinit();
+
+		var p = document.getElementById("photos");
+		p.addEventListener("mousemove", function(e) {
+			var max = p.scrollWidth - p.clientWidth;
+			var mousemax = p.clientWidth;
+
+			var q = max / mousemax;
+			var scr = e.clientX * q;
+
+			console.log("scrollto", scr);
+
+			p.scrollLeft = scr;
+		});
 	});
 
 	window.addEventListener("resize", function() {
