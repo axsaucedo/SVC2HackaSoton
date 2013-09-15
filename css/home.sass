@@ -23,7 +23,7 @@ body
 	:background-image url(../images/logolb.png)
 	:background-repeat no-repeat
 	:background-size contain
-	:margin 7% auto
+	:margin 50px auto
 	:height $logo-height
 	:width $logo-width
 	:display block
@@ -32,17 +32,16 @@ body
 #hackasoton-buttons
 	:width 100%
 	:text-align center
+	:height 40px
+	:margin 50px 0 0 0
 	a
 		+buttonStyle($logo-red, 0px, darken($logo-red, 30%))
 
 #hackasoton-slogan
-	:position relative
 	:font-family $second-font
 	:text-align center
-	:margin 0px auto
-	:font-size 1.5em
-	:color white
-	:top -10%
+	:font-size 1.3em
+	:color #fff
 	
 @-webkit-keyframes move-year
 	0%
