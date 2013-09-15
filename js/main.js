@@ -65,10 +65,10 @@
 			$('.android').removeClass("android-active");
 		}
 
-		if(parallaxAndroid < 0) {
-			console.log(parallaxAndroid);
-			$('#photos-wrapper').css('margin-left', parallaxAndroid/4);
-		}
+		// if(parallaxAndroid < 0) {
+		// 	console.log(parallaxAndroid);
+		// 	$('#photos-wrapper').css('margin-left', parallaxAndroid/4);
+		// }
 
 		var parallaxPrizes = (heightPrize - (60+height + offsetPrizes - scrolled))/12;
 		if (parallaxPrizes > 0) {
