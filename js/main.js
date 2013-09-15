@@ -37,7 +37,7 @@
 		mapinit();
 
 		var p = document.getElementById("photos");
-		p.addEventListener("mousemove", function(e) {
+		window.addEventListener("mousemove", function(e) {
 			var max = p.scrollWidth - p.clientWidth;
 			var mousemax = p.clientWidth;
 
