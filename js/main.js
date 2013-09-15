@@ -52,6 +52,11 @@
 			$('.android').removeClass("android-active");
 		}
 
+		if(parallaxAndroid < 0) {
+			console.log(parallaxAndroid);
+			$('#photos').css('margin-left', parallaxAndroid/2);
+		}
+
 		var parallaxPrizes = (heightPrize - (60+height + offsetPrizes - scrolled))/12;
 		if (parallaxPrizes > 0) {
 			console.log("Prizes parallax: " + parallaxPrizes, heightPrize);
