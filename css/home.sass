@@ -1,0 +1,90 @@
+$home-height: 700px
+$logo-width: 80%
+$logo-height: 25%
+
+body
+	:padding-top $home-height + 37px
+
+#hackasoton
+	:height $home-height
+	:width 100%
+	:position fixed
+	:z-index 0
+	:padding-top 37px // hardcoded navbar height
+	:top 0px
+	:left 0px
+	:overflow hidden
+	:z-index 0
+	:background url(../wallpapers/binary-blue.jpg) no-repeat
+	:background-size cover
+
+#hackasoton-logo
+	:text-indent -10000px
+	:background-image url(../images/logolb.png)
+	:background-repeat no-repeat
+	:background-size contain
+	:margin 50px auto
+	:height $logo-height
+	:width $logo-width
+	:display block
+	:padding 0px
+
+#hackasoton-buttons
+	:width 100%
+	:text-align center
+	:height 40px
+	:margin 50px 0 0 0
+	a
+		+buttonStyle($logo-red, 0px, darken($logo-red, 30%))
+
+#hackasoton-slogan
+	:font-family $second-font
+	:text-align center
+	:font-size 1.3em
+	:color #fff
+	
+@-webkit-keyframes move-year
+	0%
+		right: 0%
+	50%
+		right: 50%
+	100%
+		right: 0%
+
+#hackasoton-year
+	font-size: 13em
+	font-family: $second-font
+	color: rgba($big-subtitle-colour, 0.3)
+	position: absolute
+	bottom: 5%
+	height: 250px
+
+	-webkit-animation: move-year 150s linear infinite
+	-moz-animation:    move-year 150s linear infinite
+	-o-animation:      move-year 150s linear infinite
+	animation:         move-year 150s linear infinite
+
+@-webkit-keyframes move-month
+	0%
+		left: 10%
+	50%
+		left: 60%
+	100%
+		left: 10%
+
+
+#hackasoton-month
+	position: absolute
+	font-family: $second-font
+	color: $big-subtitle-colour
+	opacity: 0.7
+	font-size: 3em
+	bottom: 30%
+	left: 0px
+	white-space: nowrap
+
+	-webkit-animation: move-month 100s linear infinite
+	-moz-animation:    move-month 100s linear infinite
+	-o-animation:      move-month 100s linear infinite
+	animation:         move-month 100s linear infinite
+
