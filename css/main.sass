@@ -10,6 +10,7 @@
 @import "android"
 @import "sponsors"
 @import "location"
+@import "share"
 
 @font-face
 	font-family: Akashi
@@ -39,7 +40,7 @@ a
 
 article
 	:position relative
-	:z-index 5
+	:z-index 10
 	:padding 67px 0px 30px 0px
 	:background-color $article-bgcolor
 	:width 100%
@@ -56,27 +57,9 @@ article h1
 	:text-align center
 	:font-weight normal
 
-#apply-button
-	background: #990000
-	right: 5px
-	top: 4px
-	padding: 5px 10px 6px
-	color: #fff
-	text-decoration: none
-	font-weight: bold
-	line-height: 1
-	-moz-border-radius: 5px
-	-webkit-border-radius: 5px
-	-moz-box-shadow: 0 1px 3px #999
-	-webkit-box-shadow: 0 1px 3px #999
-	text-shadow: 0 -1px 1px #222
-	border-bottom: 1px solid #222
-	position: absolute
-	cursor: pointer
-	&:active
-		background: #444
+.column-3
+	+column(3)
 
-
-
-
+.column-5
+	+column(5)
 

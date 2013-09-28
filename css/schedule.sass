@@ -2,6 +2,7 @@ $schedule-header-height: 80px
 
 .day
 	width: (100%/3)
+	:min-width 320px
 	float: left
 	overflow: hidden
 	padding-top: 20px
@@ -10,18 +11,19 @@ $schedule-header-height: 80px
 	width: 100%
 	height: $schedule-header-height
 	padding-bottom: 30px
-	div
+	+clearfix()
+	>div
 		float: left
 
 .schedule-dow
 	padding: 5px 5px 5px 5px
 	font-size: 3.5em
-	
 
 .day-month
 	margin-left: 20px
 	width: 60px
 	height: $schedule-header-height
+	text-align: center
 
 .schedule-month
 	font-size: 1.6em
@@ -30,30 +32,25 @@ $schedule-header-height: 80px
 	font-size: 2.3em
 
 .schedule-entry
-	height: 30px
-	padding: 5px 5px 5px 20px
+	+clearfix
+	:margin 5px 10px 0 0 
+	:border-radius 4px
+
 	&:hover
-		-webkit-transform:  scale(1.4) rotate(2deg)
-		padding-left: 50px
+		background: lighten($big-subtitle-colour,50%)
+		-webkit-transform:  scale(1.1)
+		margin-left: 20px
 
 	div
 		float: left
+		padding: 7px 10px
+
 	div:first-child
+		:border-radius 4px
 		background: $big-subtitle-colour
-		right: 5px
-		top: 4px
 		width: 40px
-		padding: 5px 10px 6px
 		color: #fff
 		text-decoration: none
 		font-weight: bold
-		line-height: 1
-		-moz-border-radius: 5px
-		-webkit-border-radius: 5px
-		-moz-box-shadow: 0 1px 3px #999
-		-webkit-box-shadow: 0 1px 3px #999
-		text-shadow: 0 -1px 1px #222
-		border-bottom: 1px solid #222
 
-	div:nth-child(2)
-		padding: 5px 5px 5px 20px 
+
