@@ -44,9 +44,9 @@
 			var q = max / mousemax;
 			var scr = e.clientX * q;
 
-			console.log("scrollto", scr);
+//			console.log("scrollto", scr);
 
-			p.scrollLeft = max - scr;
+			p.scrollLeft =  scr;
 		});
 	});
 
