@@ -2,7 +2,7 @@ $triWidth: 20px
 $triHeight: 10px
 
 $judgeImg: 200px
-$judgeImgBorder: 0px
+$judgeImgBorder: 5px
 
 $judge-border-color: #128acd
 
@@ -29,6 +29,7 @@ $judge-border-color: #128acd
 		:width $judgeImg
 		:height $judgeImg
 		:border-radius ($judgeImg+($judgeImgBorder*2))/2
+		:border $judgeImgBorder solid transparent
 		:position relative
 		:z-index 5
 			
@@ -84,7 +85,7 @@ $judge-border-color: #128acd
 	&:hover
 		img
 			// :margin-top -10px
-			// :border 5px solid $judge-border-color
+			:border $judgeImgBorder solid $judge-border-color
 
 		div
 			:display block
