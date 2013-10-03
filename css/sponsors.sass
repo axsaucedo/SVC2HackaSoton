@@ -1,15 +1,43 @@
-#main-sponsor-logo
-	background-image: url(../images/bloomberg-logo.jpg)
-	background-repeat: no-repeat
-	background-size: contain
-	margin: auto auto
-	width: 70%
-	height: 180px
+$sponsorHeight: 200px
+$sponsorVerticalMargin: 30px
+$sponsorsPerRow: 2
+$sponsorHorizontalMargin: 6%
 
-#unisoton-logo
-	:margin auto auto
-	:background-image url(../images/unisotonlogo.jpg)
-	:background-repeat no-repeat
-	:background-size contain
-	:width 500px
-	:height 100px
+#partners, #golden-sponsors
+	:margin 120px 0
+
+.main-sponsor
+	img
+		:width 70%
+		:display block
+		:margin 0 auto
+
+.sponsor
+	:width ((100%-$sponsorHorizontalMargin) / $sponsorsPerRow)
+	:float left
+	:height $sponsorHeight
+	:margin-bottom $sponsorVerticalMargin
+	:text-align center
+	p
+		:text-align left
+	a
+		:text-align center
+		:display inline-block
+	img
+		:max-width 100%
+		:max-height $sponsorHeight
+
+	&:nth-child(#{$sponsorsPerRow}n+1)
+		:margin-right $sponsorHorizontalMargin
+
+.sponsor-leftimg
+	+clearfix()
+	a
+		:text-align left
+		:display block
+		:float left
+		:width 40%
+	p
+		:display block
+		:width auto
+		:overflow hidden
