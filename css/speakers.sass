@@ -1,0 +1,118 @@
+$triWidth: 20px
+$triHeight: 10px
+
+$judgeImg: 200px
+$judgeImgBorder: 5px
+
+$judge-border-color: #128acd
+
+=triangle($w, $h, $c)
+	width: 0px
+	height: 0px
+	border-style: solid
+	border-width: 0 $w/2 $h $w/2
+	border-color: transparent transparent $judge-border-color transparent
+
+#speakers
+	padding: 50px 0px 200px
+	background: white
+	margin-left: auto
+	marin-right: auto
+	display: block
+	h1 
+		margin-top: 0
+
+.speaker-box
+	margin-left: auto
+	margin-right: auto
+	max-width: 900px
+	width: 100%
+	position: relative
+	height: 280px
+
+.speaker-left
+	width: 50%
+	height: 100%
+	float: left
+	iframe
+		width: 460px
+		height: 255px
+
+.speaker-right
+	margin-left: auto
+	margin-right: auto
+	position: absolute
+	right: 0px
+	width: 400px
+
+
+.speaker
+	:text-align center
+	:margin-bottom 50px
+	:position relative
+	img
+		:width $judgeImg
+		:height $judgeImg
+		:border-radius ($judgeImg+($judgeImgBorder*2))/2
+		:border $judgeImgBorder solid transparent
+		:position relative
+		:z-index 5
+			
+
+	div
+		:display none
+		:position absolute
+		:top 100%
+		:width 100%
+		:z-index 15
+		:background #f3f3f3
+		:text-align left
+		:padding 10px
+		:border-radius 10px
+		:border 5px solid $judge-border-color
+		.trian
+			:left 50%
+			:margin-left -($triWidth/2)
+			:position absolute
+			:top -$triHeight
+			+triangle($triWidth, $triHeight, $logo-red)
+
+	h2
+		:color $logo-red
+		:font-weight 100
+		:margin-bottom 0px
+
+	h4
+		:margin 0px
+		:color #999
+		:font-size 0.8em
+		:text-transform uppercase
+
+	nav
+		:display none
+		:position absolute
+		:right 0px
+		:top 0px
+		:width 50%
+		:text-align right
+		a
+			:display block
+			:padding 10px 5px 10px 20px
+			:font-size 0.8em
+			:text-decoration none
+			&:hover
+				:background-color $judge-border-color
+				:color #fff
+		a:last-child
+			:border-bottom 0px
+
+
+	&:hover
+		img
+			// :margin-top -10px
+			:border $judgeImgBorder solid $judge-border-color
+
+		div
+			:display block
+		nav
+			:display inline-block
